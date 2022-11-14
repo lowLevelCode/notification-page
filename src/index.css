@@ -1,13 +1,44 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&family=Plus+Jakarta+Sans:wght@500;800&display=swap');
+
+:root {
+    --primary_red: hsl(1, 90%, 64%);
+    --primary_blue: hsl(219, 85%, 26%);
+    --very_light_grayish_blue: hsl(210, 60%, 98%);
+    --light_grayish_blue_1: hsl(211, 68%, 94%);
+    --light_grayish_blue_2: hsl(205, 33%, 90%);
+    --grayish_blue: hsl(219, 14%, 63%);
+    --dark_grayish_blue: hsl(219, 12%, 42%);
+    --very_dark_blue: hsl(224, 21%, 14%);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@layer utilities {
+    @variants hover {
+        .bg-light_grayish_blue_1 {
+            background-color: var(--light_grayish_blue_1);
+        }
+        .text-primary_blue {
+            color: var(--primary_blue);
+        }
+    }
+}
+
+body {
+    background-color: var(--very_light_grayish_blue);
+    font-family: 'Manrope', sans-serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.text-primary_blue {
+    color: var(--primary_blue);
+}
+.bg-primary_blue {
+    background-color: var(--primary_blue);
+}
+
+.bg-very_light_grayish_blue {
+    background-color: var(--very_light_grayish_blue);
 }
